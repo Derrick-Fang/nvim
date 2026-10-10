@@ -24,7 +24,9 @@ return {
         callback = function(args)
           local opts = { buffer = args.buf, silent = true }
           vim.keymap.set("n", "gd", vim.lsp.buf.definition, vim.tbl_extend("force", opts, { desc = "Go to definition" }))
-          vim.keymap.set("n", "gr", vim.lsp.buf.references, vim.tbl_extend("force", opts, { desc = "Find references" }))
+          vim.keymap.set("n", "gr", function()
+            require("telescope.builtin").lsp_references()
+          end, vim.tbl_extend("force", opts, { desc = "Find references" }))
           vim.keymap.set("n", "K", vim.lsp.buf.hover, vim.tbl_extend("force", opts, { desc = "Hover documentation" }))
         end,
       })
