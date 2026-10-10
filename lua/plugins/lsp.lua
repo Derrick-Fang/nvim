@@ -9,7 +9,8 @@ return {
     "williamboman/mason-lspconfig.nvim",
     dependencies = { "williamboman/mason.nvim" },
     opts = {
-      ensure_installed = { "pyright", "clangd" },
+      -- clangd uses the one from Xcode Command Line Tools (/usr/bin/clangd)
+      ensure_installed = { "pyright" },
     },
   },
   -- LSP config
@@ -28,11 +29,11 @@ return {
         end,
       })
 
-      -- Diagnostic display
+      -- Diagnostic display (disabled)
       vim.diagnostic.config({
-        virtual_text = true,
-        signs = true,
-        underline = true,
+        virtual_text = false,
+        signs = false,
+        underline = false,
         severity_sort = true,
       })
 
