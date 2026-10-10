@@ -20,14 +20,15 @@ return {
       },
       overrides = function(colors)
         return {
-          -- 取消下面两行的注释，背景变成纯黑
-          -- Normal = { bg = "#000000" },
-          -- NormalFloat = { bg = "#000000" },
+          -- 深蓝偏黑背景
+          Normal = { bg = "#0a0e14" },
+          NormalFloat = { bg = "#0a0e14" },
+          NormalNC = { bg = "#0a0e14" },
         }
       end,
-      theme = "dragon",
+      theme = "wave",
       background = {
-        dark = "dragon",   -- darker variant
+        dark = "wave",     -- default variant
         light = "lotus",
       },
     })
