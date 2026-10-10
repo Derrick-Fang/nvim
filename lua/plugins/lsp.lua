@@ -36,6 +36,8 @@ return {
         underline = false,
         severity_sort = true,
       })
+      -- 彻底关闭所有诊断提示
+      vim.diagnostic.enable(false)
 
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       vim.lsp.config("pyright", { capabilities = capabilities })
