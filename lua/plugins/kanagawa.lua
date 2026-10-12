@@ -24,6 +24,17 @@ return {
           Normal = { bg = "#0a0e14" },
           NormalFloat = { bg = "#0a0e14" },
           NormalNC = { bg = "#0a0e14" },
+
+          -- 成员变量/属性: obj.attr / self.x  (waveAqua1)
+          ["@variable.member"] = { fg = colors.palette.waveAqua1 },
+          ["@property"] = { link = "@variable.member" },
+          ["@lsp.type.property"] = { link = "@variable.member" },
+
+          -- 类名出现在任意位置 (a = Node() 的 Node) 与类型声明同色
+          ["@lsp.type.class"] = { link = "@type" },
+          ["@lsp.type.type"] = { link = "@type" },
+          ["@lsp.type.enum"] = { link = "@type" },
+          ["@constructor"] = { link = "@type" },
         }
       end,
       theme = "wave",

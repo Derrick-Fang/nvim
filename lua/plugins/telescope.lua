@@ -13,6 +13,8 @@ return {
     { "<leader>fo", "<cmd>Telescope oldfiles<cr>", desc = "Recent files" },
     { "<leader>fd", "<cmd>Telescope diagnostics<cr>", desc = "Diagnostics" },
     { "<leader>fs", "<cmd>Telescope lsp_document_symbols<cr>", desc = "Document symbols" },
+    { "<leader>fm", "<cmd>Telescope lsp_document_symbols symbols=function,method<cr>", desc = "Functions/methods" },
+    { "<leader>fS", "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", desc = "Workspace symbols" },
     { "<leader>fc", "<cmd>Telescope colorscheme<cr>", desc = "Colorschemes" },
   },
   config = function()

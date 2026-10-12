@@ -1,3 +1,7 @@
+-- macOS: use system clangd from Xcode Command Line Tools (/usr/bin/clangd)
+-- Linux: install clangd via mason (auto-downloaded)
+local is_linux = vim.uv.os_uname().sysname == "Linux"
+
 return {
   -- LSP server installer
   {
@@ -9,10 +13,10 @@ return {
     "williamboman/mason-lspconfig.nvim",
     dependencies = { "williamboman/mason.nvim" },
     opts = {
-      -- clangd uses the one from Xcode Command Line Tools (/usr/bin/clangd)
-      ensure_installed = { "pyright" },
+      ensure_installed = is_linux and { "pyright", "clangd" } or { "pyright" },
     },
   },
+
   -- LSP config
   {
     "neovim/nvim-lspconfig",

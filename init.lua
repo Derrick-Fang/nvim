@@ -1,3 +1,7 @@
+-- Proxy for GitHub access (tree-sitter / lazy plugin downloads)
+vim.env.https_proxy = "http://127.0.0.1:7897"
+vim.env.http_proxy = "http://127.0.0.1:7897"
+
 -- Leader key (set before lazy.nvim)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "

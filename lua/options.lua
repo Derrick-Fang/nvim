@@ -32,6 +32,9 @@ opt.splitbelow = true
 -- Search / misc
 opt.incsearch = true
 opt.hlsearch = true
+
+-- 按 Esc 清除搜索高亮
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { silent = true })
 opt.clipboard = "unnamedplus"
 opt.mouse = "a"
 opt.completeopt = { "menu", "menuone", "noselect" }
