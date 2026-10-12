@@ -39,3 +39,6 @@ opt.clipboard = "unnamedplus"
 opt.mouse = "a"
 opt.completeopt = { "menu", "menuone", "noselect" }
 opt.background = "dark"
+
+-- 所有模式都使用实心方块光标（包括输入模式）
+opt.guicursor = "n-v-c-i-ci-ve-r-cr-o-sm:block"
